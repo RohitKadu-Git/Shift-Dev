@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl animate-pulse delay-1000" />
@@ -12,21 +12,10 @@ export default function Hero() {
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-fade-in-up">
         {/* Badge */}
-        <div className="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-14 h-14">
-            <defs>
-              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#a78bfa"/>
-                <stop offset="100%" stopColor="#22d3ee"/>
-              </linearGradient>
-            </defs>
-            <rect width="32" height="32" rx="6" fill="#12121a"/>
-            <path d="M10 10 L6 16 L10 22" stroke="url(#logo-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            <path d="M22 10 L26 16 L22 22" stroke="url(#logo-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            <path d="M18 9 L14 23" stroke="url(#logo-grad)" strokeWidth="2" strokeLinecap="round" fill="none"/>
-          </svg>
+        <div className="flex justify-center mb-0">
+          <img src="/logo.svg" alt="Site Formers" className="w-[500px] h-[500px] object-contain" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Shift-Dev Web Solutions</h2>
+        {/* <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Site Formers</h2> */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 mb-8">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-sm text-purple-300 font-medium">AI-Powered Development Agency</span>
