@@ -20,7 +20,7 @@ export default function ContactForm() {
     setStatus({ type: '', message: '' });
 
     const apiUrl = import.meta.env.VITE_API_URL || 'https://shift-dev-backend.onrender.com';
-alert(import.meta.env.VITE_API_URL)
+
     try {
       const res = await fetch(`${apiUrl}/api/leads`, {
         method: 'POST',
