@@ -19,8 +19,10 @@ export default function ContactForm() {
     setLoading(true);
     setStatus({ type: '', message: '' });
 
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://shift-dev-backend.onrender.com';
+
     try {
-      const res = await fetch('/api/leads', {
+      const res = await fetch(`${apiUrl}/api/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
