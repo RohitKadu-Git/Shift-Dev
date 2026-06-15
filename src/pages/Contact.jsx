@@ -21,7 +21,7 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">WhatsApp</h3>
-              <a href="https://wa.me/919307391559" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a href="https://wa.me/917620361889" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
                 +91 7620361889
               </a>
             </div>
