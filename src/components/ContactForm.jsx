@@ -19,7 +19,7 @@ export default function ContactForm() {
     setLoading(true);
     setStatus({ type: '', message: '' });
 
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://shift-dev-backend.onrender.com';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://site-formers-backend.onrender.com';
 
     try {
       const res = await fetch(`${apiUrl}/api/leads`, {
@@ -32,6 +32,12 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus({ type: 'success', message: 'Submitted! We will reach out within 24 hours.' });
+
+        // Open WhatsApp chat with pre-filled welcome message to customer
+        const welcomeMsg = `Hi ${formData.client_name}! 👋 Thanks for reaching out to *Site Formers*. We've received your request for *${formData.business_name}*. Our team will share a free mockup within 48 hours. Feel free to ask any questions here!`;
+        const waLink = `https://wa.me/917620361889?text=${encodeURIComponent(welcomeMsg)}`;
+        window.open(waLink, '_blank');
+
         setFormData({ client_name: '', business_name: '', insta_handle: '', whatsapp: '' });
       } else {
         setStatus({ type: 'error', message: data.message || 'Something went wrong.' });
