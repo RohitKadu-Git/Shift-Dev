@@ -27,8 +27,8 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">Instagram</h3>
-              <a href="https://instagram.com/shift.dev" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
-                @shift.dev
+              <a href="https://instagram.com/siteformers" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
+                @siteformers
               </a>
             </div>
             <div>

@@ -10,7 +10,7 @@ export default function Terms() {
         <div className="space-y-8 text-gray-300 leading-relaxed">
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">1. Services</h2>
-            <p>Shift-Dev Web Solutions provides website development, design, and related digital services. By engaging our services, you agree to these terms and conditions.</p>
+            <p>Site Formers provides website development, design, and related digital services. By engaging our services, you agree to these terms and conditions.</p>
           </section>
 
           <section>
@@ -49,7 +49,7 @@ export default function Terms() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">7. Limitation of Liability</h2>
-            <p>Shift-Dev Web Solutions shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or delivered products.</p>
+            <p>Site Formers shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or delivered products.</p>
           </section>
 
           <section>

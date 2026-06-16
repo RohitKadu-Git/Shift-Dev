@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">4. Third-Party Sharing</h2>
-            <p>We do not sell, trade, or share your personal information with third parties. Your data is used exclusively for communication between you and Shift-Dev Web Solutions.</p>
+            <p>We do not sell, trade, or share your personal information with third parties. Your data is used exclusively for communication between you and Site Formers.</p>
           </section>
 
           <section>
