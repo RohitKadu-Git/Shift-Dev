@@ -38,7 +38,7 @@ import AiChatbot from './components/AiChatbot';
 
 function MainLayout() {
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-dark-900 overflow-x-hidden">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />

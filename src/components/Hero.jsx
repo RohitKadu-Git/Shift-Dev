@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-fade-in-up">
         {/* Badge */}
         <div className="flex justify-center mb-0">
-          <img src="/logo.svg" alt="Site Formers" className="w-[500px] h-[500px] object-contain" />
+          <img src="/logo.svg" alt="Site Formers" className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] object-contain" />
         </div>
         {/* <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Site Formers</h2> */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 mb-8">
@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-black leading-tight mb-6">
           <span className="text-white">High-Performance Sites</span>
           <br />
           <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -31,7 +31,7 @@ export default function Hero() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed px-2">
           We combine React, secure backends, and AI workflows to launch your business online — faster than any traditional agency.
         </p>
 
