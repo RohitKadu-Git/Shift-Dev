@@ -19,12 +19,12 @@ const samplePrompts = [
 ];
 
 const sampleImages = [
-  'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=512&h=512&fit=crop',
-  'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=512&h=512&fit=crop',
-  'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=512&h=512&fit=crop',
-  'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=512&h=512&fit=crop',
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=512&h=512&fit=crop',
-  'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
+  'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=512&h=512&fit=crop',
 ];
 
 export default function DemoAiVoiceOrder() {
@@ -61,7 +61,7 @@ export default function DemoAiVoiceOrder() {
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white font-bold text-lg">🎨</div>
             <div>
               <h1 className="text-white font-bold text-lg">AI Image Generator</h1>
-              <p className="text-xs text-gray-400">Powered by Site Formers</p>
+              <p className="text-xs text-gray-400">Powered by Site Former</p>
             </div>
           </div>
           <span className="text-xs text-gray-400 bg-gray-800 px-3 py-1 rounded-full border border-gray-700">✨ AI Art Demo</span>

@@ -6,42 +6,42 @@ const menuItems = [
     description: 'Creamy arborio rice with black truffle, parmesan, and fresh herbs.',
     price: '₹1,299',
     category: 'Mains',
-    image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
   {
     name: 'Wagyu Steak',
     description: 'Premium A5 wagyu, chargrilled to perfection with red wine jus.',
     price: '₹3,499',
     category: 'Mains',
-    image: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
   {
     name: 'Lobster Bisque',
     description: 'Rich, velvety soup with Atlantic lobster and a hint of brandy.',
     price: '₹899',
     category: 'Starters',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
   {
     name: 'Burrata Salad',
     description: 'Fresh burrata with heirloom tomatoes, basil, and aged balsamic.',
     price: '₹749',
     category: 'Starters',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/1579739/pexels-photo-1579739.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
   {
     name: 'Tiramisu',
     description: 'Classic Italian dessert with espresso-soaked ladyfingers and mascarpone.',
     price: '₹599',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
   {
     name: 'Crème Brûlée',
     description: 'Vanilla bean custard with a caramelized sugar crust.',
     price: '₹549',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&h=250&fit=crop',
+    image: 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop',
   },
 ];
 
@@ -88,7 +88,7 @@ export default function DemoRestaurant() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&h=900&fit=crop)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#f9f6f1]" />
         <div className="relative z-10 text-center px-6 max-w-3xl">

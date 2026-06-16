@@ -1,29 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-export default function AdminDemoView() {
-  const { id } = useParams();
+export default function PreviewDemo() {
+  const { token } = useParams();
   const [pageData, setPageData] = useState(null);
   const [businessName, setBusinessName] = useState('');
   const [loading, setLoading] = useState(true);
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
-    const token = sessionStorage.getItem('admin_token');
-    if (!token) {
-      window.location.href = '/admin/demos';
-      return;
-    }
     const apiUrl = import.meta.env.VITE_API_URL || 'https://site-former-backend.onrender.com';
-    fetch(`${apiUrl}/api/demos/${id}`, {
-      headers: { 'Authorization': `Bearer ${token}` },
-    })
-      .then(res => {
-        if (res.status === 401) { window.location.href = '/admin/demos'; return null; }
-        return res.json();
-      })
+    fetch(`${apiUrl}/api/preview/${token}`)
+      .then(res => res.json())
       .then(data => {
-        if (data && data.success) {
+        if (data.success) {
           setBusinessName(data.demo.business_name);
           const parsed = typeof data.demo.page_data === 'string' ? JSON.parse(data.demo.page_data) : data.demo.page_data;
           setPageData(parsed);
@@ -31,12 +21,15 @@ export default function AdminDemoView() {
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [id]);
+  }, [token]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />
+        <div className="text-center">
+          <div className="w-10 h-10 border-2 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-gray-400">Loading your demo...</p>
+        </div>
       </div>
     );
   }
@@ -46,7 +39,7 @@ export default function AdminDemoView() {
       <div className="min-h-screen bg-gray-950 flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-2">Demo Not Found</h1>
-          <Link to="/admin/demos" className="text-purple-400 hover:text-purple-300">← Back to list</Link>
+          <p className="text-gray-400">This link may have expired or is invalid.</p>
         </div>
       </div>
     );
@@ -57,7 +50,6 @@ export default function AdminDemoView() {
   const isLight = theme === 'light';
   const accent = secondaryColor || primaryColor;
 
-  // Theme colors
   const bg = isLight ? 'bg-white' : 'bg-gray-950';
   const bgAlt = isLight ? 'bg-gray-50' : 'bg-gray-900/30';
   const cardBg = isLight ? 'bg-white border-gray-200' : 'bg-gray-900/80 border-gray-800';
@@ -73,11 +65,9 @@ export default function AdminDemoView() {
       <header className={`fixed top-0 left-0 right-0 z-50 ${headerBg} backdrop-blur-md border-b ${borderColor}`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="text-xl font-bold" style={{ color: primaryColor }}>{businessName}</span>
-          <div className="flex items-center gap-3">
-            <Link to="/" className="px-4 py-2 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: primaryColor }}>
-              {ctaText}
-            </Link>
-          </div>
+          <button className="px-4 py-2 rounded-lg text-sm font-semibold text-white" style={{ backgroundColor: primaryColor }}>
+            {ctaText}
+          </button>
         </div>
       </header>
 
@@ -143,7 +133,7 @@ export default function AdminDemoView() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services?.map((service, i) => (
-              <div key={i} className={`${cardBg} border rounded-2xl p-8 hover:shadow-lg transition-all group`}>
+              <div key={i} className={`${cardBg} border rounded-2xl p-8 hover:shadow-lg transition-all`}>
                 <div className="text-4xl mb-5">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-3" style={{ color: primaryColor }}>{service.title}</h3>
                 <p className={`${textSub} leading-relaxed`}>{service.description}</p>
@@ -172,23 +162,19 @@ export default function AdminDemoView() {
         </div>
       </section>
 
-      {/* Portfolio / Our Work */}
+      {/* Portfolio */}
       {portfolio && portfolio.length > 0 && (
         <section className={`py-20 px-6 ${bgAlt}`}>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${textMain}`}>Our Work</h2>
-              <p className={`${textSub} max-w-xl mx-auto`}>Some of our recent projects and achievements</p>
+              <p className={`${textSub} max-w-xl mx-auto`}>Some of our recent projects</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {portfolio.map((work, i) => (
                 <div key={i} className={`${cardBg} border rounded-2xl overflow-hidden group hover:shadow-xl transition-all`}>
-                  <div className="aspect-video bg-gray-200 overflow-hidden relative">
-                    <img
-                      src={work.image}
-                      alt={work.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                  <div className="aspect-video overflow-hidden">
+                    <img src={work.image} alt={work.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6">
                     <h3 className={`text-lg font-bold mb-2 ${textMain}`}>{work.title}</h3>
@@ -207,16 +193,11 @@ export default function AdminDemoView() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-14">
               <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${textMain}`}>Gallery</h2>
-              <p className={`${textSub} max-w-xl mx-auto`}>A glimpse into what we do</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {galleryImages.map((imgUrl, i) => (
                 <div key={i} className={`${i === 0 || i === 3 ? 'row-span-2' : ''} rounded-xl overflow-hidden`}>
-                  <img
-                    src={imgUrl}
-                    alt={`Gallery ${i + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                  <img src={imgUrl} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               ))}
             </div>
@@ -264,7 +245,7 @@ export default function AdminDemoView() {
                 <div key={i} className={`${cardBg} border rounded-xl overflow-hidden`}>
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className={`w-full px-6 py-5 flex items-center justify-between text-left hover:opacity-80 transition-colors`}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:opacity-80 transition-colors"
                   >
                     <span className={`font-semibold ${textMain} pr-4`}>{item.question}</span>
                     <svg className={`w-5 h-5 ${textMuted} flex-shrink-0 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -289,10 +270,10 @@ export default function AdminDemoView() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full blur-[100px] opacity-20" style={{ backgroundColor: accent }} />
           <div className="relative z-10">
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${textMain}`}>Ready to Get Started?</h2>
-            <p className={`${textSub} mb-8 max-w-lg mx-auto`}>This is an AI-generated preview. The final website will be even more polished and customized to your brand.</p>
-            <button className="px-8 py-4 rounded-full text-lg font-bold text-white hover:opacity-90 transition-opacity" style={{ background: `linear-gradient(135deg, ${primaryColor}, ${accent})` }}>
+            <p className={`${textSub} mb-8 max-w-lg mx-auto`}>Love what you see? Let's bring this to life for your business.</p>
+            <a href="https://wa.me/917620361889?text=Hi%2C%20I%20loved%20my%20demo%20website!%20Let%27s%20get%20started." target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 rounded-full text-lg font-bold text-white hover:opacity-90 transition-opacity" style={{ background: `linear-gradient(135deg, ${primaryColor}, ${accent})` }}>
               {ctaText}
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -301,7 +282,7 @@ export default function AdminDemoView() {
       <footer className={`border-t ${borderColor} py-8 px-6`}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className={`${textMuted} text-sm`}>© {new Date().getFullYear()} {businessName}. All rights reserved.</p>
-          <p className={`${textMuted} text-sm`}>Powered by <span style={{ color: primaryColor }} className="font-medium">Site Former</span></p>
+          <p className={`${textMuted} text-sm`}>Built by <a href="/" className="font-medium" style={{ color: primaryColor }}>Site Former</a></p>
         </div>
       </footer>
     </div>

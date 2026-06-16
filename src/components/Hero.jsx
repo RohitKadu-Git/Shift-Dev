@@ -13,9 +13,9 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-fade-in-up">
         {/* Badge */}
         <div className="flex justify-center mb-0">
-          <img src="/logo.svg" alt="Site Formers" className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] object-contain" />
+          <img src="/logo.svg" alt="Site Former" className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] object-contain" />
         </div>
-        {/* <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Site Formers</h2> */}
+        {/* <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Site Former</h2> */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 mb-8">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-sm text-purple-300 font-medium">AI-Powered Development Agency</span>
@@ -58,7 +58,7 @@ export default function Hero() {
           {[
             { value: '48h', label: 'Delivery' },
             { value: '99.9%', label: 'Uptime' },
-            { value: '150+', label: 'Sites Launched' },
+            { value: '100+', label: 'Sites Launched' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>

@@ -11,13 +11,19 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          {/* <img src="/logo.svg" alt="Site Formers" className="w-10 h-10 object-contain" /> */}
-          <span className="text-white font-bold text-lg">Site Formers</span>
+          {/* <img src="/logo.svg" alt="Site Former" className="w-10 h-10 object-contain" /> */}
+          <span className="text-white font-bold text-lg">Site Former</span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Home</Link>
+          <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</Link>
+          {isHome ? (
+            <a href="#ai-solutions" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">AI Solutions</a>
+          ) : (
+            <Link to="/#ai-solutions" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">AI Solutions</Link>
+          )}
           {isHome ? (
             <a href="#portfolio" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">Portfolio</a>
           ) : (
@@ -61,9 +67,23 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-800/50 bg-dark-900/95 backdrop-blur-md px-6 py-4 space-y-3">
           <Link to="/" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Home</Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">About</Link>
+          {isHome ? (
+            <a href="#ai-solutions" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">AI Solutions</a>
+          ) : (
+            <Link to="/#ai-solutions" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">AI Solutions</Link>
+          )}
+          {isHome ? (
+            <a href="#portfolio" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Portfolio</a>
+          ) : (
+            <Link to="/#portfolio" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Portfolio</Link>
+          )}
+          {isHome ? (
+            <a href="#pricing" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Pricing</a>
+          ) : (
+            <Link to="/#pricing" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Pricing</Link>
+          )}
           <Link to="/contact" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Contact</Link>
-          <Link to="/privacy-policy" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Privacy Policy</Link>
-          <Link to="/terms" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm font-medium">Terms & Conditions</Link>
         </div>
       )}
     </header>

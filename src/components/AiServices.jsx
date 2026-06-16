@@ -39,7 +39,7 @@ const aiFeatures = [
 
 export default function AiServices() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section id="ai-solutions" className="py-24 px-6 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-3xl" />
 

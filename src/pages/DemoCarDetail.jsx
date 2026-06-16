@@ -38,19 +38,19 @@ const testimonials = [
     name: 'Rajesh Kumar',
     car: 'BMW 5 Series',
     text: 'Absolutely mind-blowing results. My car looks better than the day I bought it. The ceramic coating is phenomenal.',
-    image: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=300&h=200&fit=crop',
+    image: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop',
   },
   {
     name: 'Aditya Patel',
     car: 'Mercedes C-Class',
     text: 'The paint correction removed years of swirl marks. It literally looks like glass now. Worth every rupee.',
-    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=300&h=200&fit=crop',
+    image: 'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop',
   },
   {
     name: 'Kavitha Rao',
     car: 'Audi Q7',
     text: 'Interior deep clean was incredible. The leather smells and feels brand new. My kids had destroyed it — now it is perfect.',
-    image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=300&h=200&fit=crop',
+    image: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop',
   },
 ];
 
@@ -62,7 +62,7 @@ function BeforeAfterSlider() {
       {/* After Image (bottom layer) */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&h=600&fit=crop"
+          src="https://images.pexels.com/photos/3874337/pexels-photo-3874337.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
           alt="After detailing"
           className="w-full h-full object-cover"
         />
@@ -71,7 +71,7 @@ function BeforeAfterSlider() {
       {/* Before Image (top layer, clipped) */}
       <div className="absolute inset-0 overflow-hidden" style={{ width: `${sliderPos}%` }}>
         <img
-          src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1200&h=600&fit=crop"
+          src="https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
           alt="Before detailing"
           className="w-full h-full object-cover"
           style={{ minWidth: '100%', width: `${100 / (sliderPos / 100)}%`, maxWidth: 'none' }}
@@ -123,7 +123,7 @@ export default function DemoCarDetail() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1600&h=900&fit=crop)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0a0a0a]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,229,255,0.05)_0%,transparent_70%)]" />

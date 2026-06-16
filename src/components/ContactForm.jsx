@@ -20,7 +20,7 @@ export default function ContactForm() {
     setLoading(true);
     setStatus({ type: '', message: '' });
 
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://site-formers-backend.onrender.com';
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://site-former-backend.onrender.com';
 
     try {
       const res = await fetch(`${apiUrl}/api/leads`, {
@@ -35,7 +35,7 @@ export default function ContactForm() {
         setStatus({ type: 'success', message: 'Submitted successfully! Redirecting you to WhatsApp...' });
 
         // Open WhatsApp chat after 2 seconds
-        const customerMsg = `Hi Site Formers,\n\nI'm interested in getting a professional website for my business.\n\n*Name:* ${formData.client_name}\n*Business:* ${formData.business_name}${formData.business_description ? `\n*Requirement:* ${formData.business_description}` : ''}\n*Instagram:* @${formData.insta_handle}\n*WhatsApp:* ${formData.whatsapp}\n\nPlease share more details about your services and pricing. Looking forward to hearing from you.`;
+        const customerMsg = `Hi Site Former,\n\nI'm interested in getting a professional website for my business.\n\n*Name:* ${formData.client_name}\n*Business:* ${formData.business_name}${formData.business_description ? `\n*Requirement:* ${formData.business_description}` : ''}\n*Instagram:* @${formData.insta_handle}\n*WhatsApp:* ${formData.whatsapp}\n\nPlease share more details about your services and pricing. Looking forward to hearing from you.`;
         const waLink = `https://wa.me/917620361889?text=${encodeURIComponent(customerMsg)}`;
 
         setTimeout(() => {
@@ -132,8 +132,11 @@ export default function ContactForm() {
             {/* Business Description */}
             <div>
               <label htmlFor="business_description" className="block text-sm font-medium text-gray-300 mb-2">
-                What type of website do you need? <span className="text-gray-500">(optional)</span>
+                Tell us about your dream website <span className="text-gray-500">(optional)</span>
               </label>
+              <p className="text-xs text-gray-500 mb-2">
+                Share your business details so we can generate a free demo mockup just for you.
+              </p>
               <textarea
                 id="business_description"
                 name="business_description"

@@ -2,7 +2,7 @@ import React from 'react';
 
 const listings = [
   {
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹1.2 Cr',
     address: 'Bandra West, Mumbai',
     beds: 3,
@@ -11,7 +11,7 @@ const listings = [
     tag: 'New',
   },
   {
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹85 Lac',
     address: 'Koregaon Park, Pune',
     beds: 2,
@@ -20,7 +20,7 @@ const listings = [
     tag: 'Featured',
   },
   {
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹2.5 Cr',
     address: 'Whitefield, Bangalore',
     beds: 4,
@@ -29,7 +29,7 @@ const listings = [
     tag: 'Premium',
   },
   {
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹65 Lac',
     address: 'Hinjewadi, Pune',
     beds: 2,
@@ -38,7 +38,7 @@ const listings = [
     tag: null,
   },
   {
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹1.8 Cr',
     address: 'Jubilee Hills, Hyderabad',
     beds: 3,
@@ -47,7 +47,7 @@ const listings = [
     tag: 'New',
   },
   {
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop',
+    image: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     price: '₹95 Lac',
     address: 'Viman Nagar, Pune',
     beds: 3,
@@ -110,7 +110,7 @@ export default function DemoRealEstate() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&h=900&fit=crop)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/80 via-[#1e3a5f]/50 to-[#f8f9fa]" />
         <div className="relative z-10 text-center px-6 max-w-4xl w-full">
@@ -210,7 +210,7 @@ export default function DemoRealEstate() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop" alt="Featured property" className="w-full h-80 object-cover" />
+              <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Featured property" className="w-full h-80 object-cover" />
             </div>
             <div>
               <span className="text-xs text-[#1e3a5f] uppercase tracking-wider font-semibold">Featured Property</span>

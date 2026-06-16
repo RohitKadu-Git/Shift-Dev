@@ -33,10 +33,10 @@ const schedule = [
 ];
 
 const trainers = [
-  { name: 'Arjun Kapoor', specialty: 'Strength & Conditioning', image: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=300&h=300&fit=crop', exp: '8 Years' },
-  { name: 'Priya Sharma', specialty: 'Yoga & Flexibility', image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=300&h=300&fit=crop', exp: '6 Years' },
-  { name: 'Vikram Das', specialty: 'CrossFit & HIIT', image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=300&h=300&fit=crop', exp: '10 Years' },
-  { name: 'Sneha Reddy', specialty: 'Boxing & Cardio', image: 'https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=300&h=300&fit=crop', exp: '5 Years' },
+  { name: 'Arjun Kapoor', specialty: 'Strength & Conditioning', image: 'https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', exp: '8 Years' },
+  { name: 'Priya Sharma', specialty: 'Yoga & Flexibility', image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', exp: '6 Years' },
+  { name: 'Vikram Das', specialty: 'CrossFit & HIIT', image: 'https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', exp: '10 Years' },
+  { name: 'Sneha Reddy', specialty: 'Boxing & Cardio', image: 'https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop', exp: '5 Years' },
 ];
 
 export default function DemoGym() {
@@ -63,7 +63,7 @@ export default function DemoGym() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&h=900&fit=crop)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#0a0a0a]" />
         <div className="relative z-10 text-center px-6 max-w-4xl">

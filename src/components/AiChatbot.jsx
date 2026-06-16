@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 export default function AiChatbot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'ai', text: "Hi! 👋 I'm the Site Formers AI assistant. Ask me anything about our services, pricing, AI chatbots, or how we can help your business!" }
+    { role: 'ai', text: "Hi! 👋 I'm the Site Former AI assistant. Ask me anything about our services, pricing, AI chatbots, or how we can help your business!" }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -86,10 +86,10 @@ export default function AiChatbot() {
               <span className="text-lg">🤖</span>
             </div>
             <div className="flex-1">
-              <p className="text-white text-sm font-semibold">Site Formers AI</p>
+              <p className="text-white text-sm font-semibold">Site Former AI</p>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 bg-green-300 rounded-full" />
-                <span className="text-white/70 text-xs">Powered by Gemini AI</span>
+                <span className="text-white/70 text-xs">Powered by GROQ AI</span>
               </div>
             </div>
           </div>

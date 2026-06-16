@@ -27,11 +27,11 @@ const salesData = [
 ];
 
 const topProducts = [
-  { name: 'Wireless Headphones', sold: 342, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop' },
-  { name: 'Smart Watch Pro', sold: 276, image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=80&h=80&fit=crop' },
-  { name: 'Bluetooth Speaker', sold: 198, image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=80&h=80&fit=crop' },
-  { name: 'Mechanical Keyboard', sold: 156, image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=80&h=80&fit=crop' },
-  { name: 'USB-C Hub', sold: 134, image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?w=80&h=80&fit=crop' },
+  { name: 'Wireless Headphones', sold: 342, image: 'https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop' },
+  { name: 'Smart Watch Pro', sold: 276, image: 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop' },
+  { name: 'Bluetooth Speaker', sold: 198, image: 'https://images.pexels.com/photos/1279365/pexels-photo-1279365.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop' },
+  { name: 'Mechanical Keyboard', sold: 156, image: 'https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop' },
+  { name: 'USB-C Hub', sold: 134, image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop' },
 ];
 
 const navItems = [

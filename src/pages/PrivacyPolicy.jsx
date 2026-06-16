@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <div className="pt-24 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-        <p className="text-gray-400 mb-4">Last updated: {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+        <p className="text-gray-400 mb-4">Last updated: 15 June 2025</p>
 
         <div className="space-y-8 text-gray-300 leading-relaxed">
           <section>
@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">4. Third-Party Sharing</h2>
-            <p>We do not sell, trade, or share your personal information with third parties. Your data is used exclusively for communication between you and Site Formers.</p>
+            <p>We do not sell, trade, or share your personal information with third parties. Your data is used exclusively for communication between you and Site Former.</p>
           </section>
 
           <section>
@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">6. Contact Us</h2>
             <p>If you have questions about this Privacy Policy, contact us at:</p>
-            <p className="mt-2 text-purple-400">rohitkadu2016@gmail.com</p>
+            <p className="mt-2 text-purple-400">siteformers@gmail.com</p>
           </section>
         </div>
       </div>

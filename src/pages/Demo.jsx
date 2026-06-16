@@ -22,12 +22,12 @@ const services = [
 ];
 
 const galleryImages = [
-  'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=300&fit=crop',
-  'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/3997993/pexels-photo-3997993.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/3738355/pexels-photo-3738355.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/3985329/pexels-photo-3985329.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/3764568/pexels-photo-3764568.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+  'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
 ];
 
 export default function Demo() {
@@ -51,7 +51,7 @@ export default function Demo() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1600&h=900&fit=crop)' }}
+          style={{ backgroundImage: 'url(https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#faf7f2]" />
         <div className="relative z-10 text-center px-6 max-w-3xl">

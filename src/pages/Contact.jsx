@@ -15,8 +15,8 @@ export default function Contact() {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:rohitkadu2016@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                rohitkadu2016@gmail.com
+              <a href="mailto:siteformers@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors">
+                siteformers@gmail.com
               </a>
             </div>
             <div>
@@ -27,8 +27,8 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">Instagram</h3>
-              <a href="https://instagram.com/siteformers" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
-                @siteformers
+              <a href="https://instagram.com/site.former" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors">
+                @site.former
               </a>
             </div>
             <div>

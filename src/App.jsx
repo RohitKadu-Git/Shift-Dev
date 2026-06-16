@@ -23,6 +23,9 @@ import DemoAiLeadQualifier from './pages/DemoAiLeadQualifier';
 import DemoGenerated from './pages/DemoGenerated';
 import AdminDemos from './pages/AdminDemos';
 import AdminDemoView from './pages/AdminDemoView';
+import PreviewDemo from './pages/PreviewDemo';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 function HomePage() {
   return (
@@ -45,9 +48,11 @@ function MainLayout() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <AiChatbot />
@@ -71,6 +76,7 @@ function App() {
         <Route path="/demo/generated" element={<DemoGenerated />} />
         <Route path="/admin/demos" element={<AdminDemos />} />
         <Route path="/admin/demos/:id" element={<AdminDemoView />} />
+        <Route path="/preview/:token" element={<PreviewDemo />} />
         <Route path="/*" element={<MainLayout />} />
       </Routes>
     </Router>

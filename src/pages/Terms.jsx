@@ -5,12 +5,12 @@ export default function Terms() {
     <div className="pt-24 pb-16 px-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-white mb-8">Terms & Conditions</h1>
-        <p className="text-gray-400 mb-4">Last updated: {new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+        <p className="text-gray-400 mb-4">Last updated: 15 June 2025</p>
 
         <div className="space-y-8 text-gray-300 leading-relaxed">
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">1. Services</h2>
-            <p>Site Formers provides website development, design, and related digital services. By engaging our services, you agree to these terms and conditions.</p>
+            <p>Site Former provides website development, design, and related digital services. By engaging our services, you agree to these terms and conditions.</p>
           </section>
 
           <section>
@@ -49,7 +49,7 @@ export default function Terms() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">7. Limitation of Liability</h2>
-            <p>Site Formers shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or delivered products.</p>
+            <p>Site Former shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or delivered products.</p>
           </section>
 
           <section>
@@ -60,7 +60,7 @@ export default function Terms() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">9. Contact</h2>
             <p>For questions regarding these terms, reach us at:</p>
-            <p className="mt-2 text-purple-400">rohitkadu2016@gmail.com</p>
+            <p className="mt-2 text-purple-400">siteformers@gmail.com</p>
           </section>
         </div>
       </div>
