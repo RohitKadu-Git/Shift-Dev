@@ -118,7 +118,7 @@ export default function Demo() {
           <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[#2d2d2d]">Book Your Appointment</h3>
           <p className="text-gray-500 mb-10">Experience the ultimate luxury. Walk in beautiful, walk out radiant.</p>
           <a
-            href="https://wa.me/919307391559?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Elegance%20Spa"
+            href="https://wa.me/7620361889?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Elegance%20Spa"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-12 py-4 bg-[#d4af37] text-white font-bold text-lg rounded hover:bg-[#b8962e] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#d4af37]/20"

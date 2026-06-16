@@ -288,7 +288,7 @@ export default function DemoCarDetail() {
 
       {/* Mobile Sticky Footer */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#00e5ff]/20 flex gap-2">
-        <a href="tel:+919307391559" className="flex-1 py-3 bg-[#1a1a1a] border border-gray-700 text-white font-bold text-center text-sm rounded-lg">
+        <a href="tel:+917620361889" className="flex-1 py-3 bg-[#1a1a1a] border border-gray-700 text-white font-bold text-center text-sm rounded-lg">
           Call for Quote
         </a>
         <a href="#book" className="flex-1 py-3 bg-[#00e5ff] text-black font-bold text-center text-sm rounded-lg">

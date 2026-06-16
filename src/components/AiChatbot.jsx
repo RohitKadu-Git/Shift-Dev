@@ -48,7 +48,7 @@ export default function AiChatbot() {
         setMessages(prev => [...prev, { role: 'ai', text: 'Sorry, I encountered an issue. Please try again or contact us on WhatsApp!' }]);
       }
     } catch (err) {
-      setMessages(prev => [...prev, { role: 'ai', text: 'Connection issue. Please check your internet or reach us at +91 93073 91559.' }]);
+      setMessages(prev => [...prev, { role: 'ai', text: 'Connection issue. Please check your internet or reach us at +91 7620361889.' }]);
     }
 
     setLoading(false);
