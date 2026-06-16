@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     client_name: '',
     business_name: '',
+    business_description: '',
     insta_handle: '',
     whatsapp: '',
   });
@@ -31,14 +32,35 @@ export default function ContactForm() {
       const data = await res.json();
 
       if (res.ok) {
-        setStatus({ type: 'success', message: 'Submitted! We will reach out within 24 hours.' });
+        setStatus({ type: 'success', message: 'Submitted successfully! Redirecting you to WhatsApp...' });
 
-        // Open WhatsApp chat with pre-filled welcome message to customer
-        const welcomeMsg = `Hi ${formData.client_name}! 👋 Thanks for reaching out to *Site Formers*. We've received your request for *${formData.business_name}*. Our team will share a free mockup within 48 hours. Feel free to ask any questions here!`;
-        const waLink = `https://wa.me/917620361889?text=${encodeURIComponent(welcomeMsg)}`;
-        window.open(waLink, '_blank');
+        // Open WhatsApp chat after 2 seconds
+        const customerMsg = `Hi Site Formers,\n\nI'm interested in getting a professional website for my business.\n\n*Name:* ${formData.client_name}\n*Business:* ${formData.business_name}${formData.business_description ? `\n*Requirement:* ${formData.business_description}` : ''}\n*Instagram:* @${formData.insta_handle}\n*WhatsApp:* ${formData.whatsapp}\n\nPlease share more details about your services and pricing. Looking forward to hearing from you.`;
+        const waLink = `https://wa.me/917620361889?text=${encodeURIComponent(customerMsg)}`;
 
-        setFormData({ client_name: '', business_name: '', insta_handle: '', whatsapp: '' });
+        setTimeout(() => {
+          window.open(waLink, '_blank');
+        }, 2000);
+
+        // Generate AI demo page in background (only if description has 5+ words)
+        const descWords = (formData.business_description || '').trim().split(/\s+/).filter(Boolean);
+        if (descWords.length >= 5) {
+          try {
+            fetch(`${apiUrl}/api/generate-demo`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                business_name: formData.business_name,
+                business_description: formData.business_description,
+                client_name: formData.client_name,
+              }),
+            });
+          } catch (demoErr) {
+            console.error('Demo generation failed:', demoErr);
+          }
+        }
+
+        setFormData({ client_name: '', business_name: '', business_description: '', insta_handle: '', whatsapp: '' });
       } else {
         setStatus({ type: 'error', message: data.message || 'Something went wrong.' });
       }
@@ -104,6 +126,22 @@ export default function ContactForm() {
                 required
                 placeholder="Acme Inc."
                 className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+              />
+            </div>
+
+            {/* Business Description */}
+            <div>
+              <label htmlFor="business_description" className="block text-sm font-medium text-gray-300 mb-2">
+                What type of website do you need? <span className="text-gray-500">(optional)</span>
+              </label>
+              <textarea
+                id="business_description"
+                name="business_description"
+                value={formData.business_description}
+                onChange={handleChange}
+                rows={3}
+                placeholder="e.g. Restaurant website with online menu & table booking, E-commerce store, Portfolio site..."
+                className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-none"
               />
             </div>
 

@@ -20,6 +20,9 @@ import DemoCarDetail from './pages/DemoCarDetail';
 import DemoAiChat from './pages/DemoAiChat';
 import DemoAiVoiceOrder from './pages/DemoAiVoiceOrder';
 import DemoAiLeadQualifier from './pages/DemoAiLeadQualifier';
+import DemoGenerated from './pages/DemoGenerated';
+import AdminDemos from './pages/AdminDemos';
+import AdminDemoView from './pages/AdminDemoView';
 
 function HomePage() {
   return (
@@ -65,6 +68,9 @@ function App() {
         <Route path="/demo/ai-chatbot" element={<DemoAiChat />} />
         <Route path="/demo/ai-voice-order" element={<DemoAiVoiceOrder />} />
         <Route path="/demo/ai-lead-qualifier" element={<DemoAiLeadQualifier />} />
+        <Route path="/demo/generated" element={<DemoGenerated />} />
+        <Route path="/admin/demos" element={<AdminDemos />} />
+        <Route path="/admin/demos/:id" element={<AdminDemoView />} />
         <Route path="/*" element={<MainLayout />} />
       </Routes>
     </Router>
