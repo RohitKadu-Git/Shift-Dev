@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 animate-fade-in-up">
         {/* Badge */}
         <div className="flex justify-center mb-0">
-          <img src="/logo.svg" alt="Site Former" className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] object-contain" />
+          <img src="/new-logo.png" alt="Site Former" className="w-[250px] h-[250px] md:w-[500px] md:h-[500px] object-contain" />
         </div>
         {/* <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Site Former</h2> */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 mb-8">

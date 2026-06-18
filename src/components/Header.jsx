@@ -11,7 +11,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          {/* <img src="/logo.svg" alt="Site Former" className="w-10 h-10 object-contain" /> */}
+          <img src="/new-logo.png" alt="Site Former" className="w-10 h-10 object-contain" />
           <span className="text-white font-bold text-lg">Site Former</span>
         </Link>
 
