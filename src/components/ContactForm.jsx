@@ -8,17 +8,64 @@ export default function ContactForm() {
     insta_handle: '',
     whatsapp: '',
   });
+  const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({ type: '', message: '' });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // Clear error on change
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: '' });
+    }
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    // Name: required, min 2 chars, only letters and spaces
+    if (!formData.client_name.trim()) {
+      newErrors.client_name = 'Name is required';
+    } else if (formData.client_name.trim().length < 2) {
+      newErrors.client_name = 'Name must be at least 2 characters';
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.client_name.trim())) {
+      newErrors.client_name = 'Name can only contain letters and spaces';
+    }
+
+    // Business name: required, min 2 chars
+    if (!formData.business_name.trim()) {
+      newErrors.business_name = 'Business name is required';
+    } else if (formData.business_name.trim().length < 2) {
+      newErrors.business_name = 'Business name must be at least 2 characters';
+    }
+
+    // Instagram handle: required, valid format
+    if (!formData.insta_handle.trim()) {
+      newErrors.insta_handle = 'Instagram handle is required';
+    } else if (!/^[a-zA-Z0-9._]{1,30}$/.test(formData.insta_handle.trim())) {
+      newErrors.insta_handle = 'Enter a valid Instagram handle (letters, numbers, dots, underscores)';
+    }
+
+    // WhatsApp: required, valid Indian/international number
+    const cleanedPhone = formData.whatsapp.replace(/[\s\-()]/g, '');
+    if (!formData.whatsapp.trim()) {
+      newErrors.whatsapp = 'WhatsApp number is required';
+    } else if (!/^\+?\d{10,15}$/.test(cleanedPhone)) {
+      newErrors.whatsapp = 'Enter a valid phone number (10-15 digits)';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setStatus({ type: '', message: '' });
+
+    if (!validate()) return;
+
+    setLoading(true);
 
     const apiUrl = import.meta.env.VITE_API_URL || 'https://site-former-backend.onrender.com';
 
@@ -106,10 +153,10 @@ export default function ContactForm() {
                 name="client_name"
                 value={formData.client_name}
                 onChange={handleChange}
-                required
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                className={`w-full px-4 py-3 rounded-xl bg-dark-900 border ${errors.client_name ? 'border-red-500' : 'border-gray-700'} text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all`}
               />
+              {errors.client_name && <p className="mt-1 text-xs text-red-400">{errors.client_name}</p>}
             </div>
 
             {/* Business Name */}
@@ -123,10 +170,10 @@ export default function ContactForm() {
                 name="business_name"
                 value={formData.business_name}
                 onChange={handleChange}
-                required
                 placeholder="Acme Inc."
-                className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                className={`w-full px-4 py-3 rounded-xl bg-dark-900 border ${errors.business_name ? 'border-red-500' : 'border-gray-700'} text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all`}
               />
+              {errors.business_name && <p className="mt-1 text-xs text-red-400">{errors.business_name}</p>}
             </div>
 
             {/* Business Description */}
@@ -137,7 +184,7 @@ export default function ContactForm() {
               <p className="text-xs text-gray-500 mb-2">
                 Share your business details so we can generate a free demo mockup just for you.
               </p>
-              <textarearohitkadu2016
+              <textarea
                 id="business_description"
                 name="business_description"
                 value={formData.business_description}
@@ -145,7 +192,7 @@ export default function ContactForm() {
                 rows={3}
                 placeholder="e.g. Restaurant website with online menu & table booking, E-commerce store, Portfolio site..."
                 className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all resize-none"
-              />
+              ></textarea>
             </div>
 
             {/* Instagram Handle */}
@@ -161,11 +208,11 @@ export default function ContactForm() {
                   name="insta_handle"
                   value={formData.insta_handle}
                   onChange={handleChange}
-                  required
                   placeholder="yourbrand"
-                  className="w-full pl-9 pr-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                  className={`w-full pl-9 pr-4 py-3 rounded-xl bg-dark-900 border ${errors.insta_handle ? 'border-red-500' : 'border-gray-700'} text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all`}
                 />
               </div>
+              {errors.insta_handle && <p className="mt-1 text-xs text-red-400">{errors.insta_handle}</p>}
             </div>
 
             {/* WhatsApp Number */}
@@ -179,10 +226,10 @@ export default function ContactForm() {
                 name="whatsapp"
                 value={formData.whatsapp}
                 onChange={handleChange}
-                required
                 placeholder="+91 98765 43210"
-                className="w-full px-4 py-3 rounded-xl bg-dark-900 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                className={`w-full px-4 py-3 rounded-xl bg-dark-900 border ${errors.whatsapp ? 'border-red-500' : 'border-gray-700'} text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all`}
               />
+              {errors.whatsapp && <p className="mt-1 text-xs text-red-400">{errors.whatsapp}</p>}
             </div>
 
             {/* Status message */}
